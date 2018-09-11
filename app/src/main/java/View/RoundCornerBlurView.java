@@ -10,6 +10,8 @@ import android.graphics.RectF;
 import android.graphics.Shader;
 import android.util.AttributeSet;
 
+import view.RealtimeBlurView;
+
 
 public class RoundCornerBlurView extends RealtimeBlurView {
 

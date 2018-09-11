@@ -1,4 +1,4 @@
-package View;
+package view;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,13 +8,12 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver;
 
-import com.lyd.jk.blurview.R;
+import com.lyd.jk.blurviewlibrary.R;
 
 import util.FastBlur;
 
@@ -51,7 +50,7 @@ public class RealtimeBlurView extends View {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RealtimeBlurView);
         mBlurRadius = a.getFloat(R.styleable.RealtimeBlurView_realtimeBlurRadius,8);
         mOverlayColor = a.getColor(R.styleable.RealtimeBlurView_realtimeOverlayColor, 0x04000000);
-        mScaleFractor = a.getFloat(R.styleable.RealtimeBlurView_realtimeDownsampleFactor,4);
+        mScaleFractor = a.getFloat(R.styleable.RealtimeBlurView_realtimeDownsampleFactor,12);
         mRoundCornerRadius=a.getDimension(R.styleable.RealtimeBlurView_realtimeBlurRoundCornerRadius,
                 TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 0, context.getResources().getDisplayMetrics()));
         a.recycle();

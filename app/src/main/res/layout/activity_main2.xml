@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <View.RealtimeBlurView
+    <view.RealtimeBlurView
         android:layout_marginTop="10dp"
         android:id="@+id/RealtimeBlurView"
         android:layout_width="300dp"
@@ -43,11 +43,11 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:layout_width="50dp"
         android:layout_height="50dp"
         android:text="切换"
         android:textColor="#ffffff"
         android:background="@color/colorAccent"
-        android:layout_alignParentBottom="true"/>
+        android:layout_alignParentRight="true"/>
 
 </RelativeLayout>
