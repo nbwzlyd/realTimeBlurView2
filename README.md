@@ -10,7 +10,7 @@
 支持高斯模糊覆盖色 RealtimeBlurView_realtimeOverlayColor
 圆角模式
 圆形模式 任意模式
-
+Jcenter
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -21,9 +21,24 @@ Add it in your root build.gradle at the end of repositories:
 	}
 Step 2. Add the dependency
 
+Maven
 	dependencies {
 	        implementation 'com.github.nbwzlyd:realTimeBlurView2:v0.1'
 	}
+	
+		<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+Step 2. Add the dependency
+
+	<dependency>
+	    <groupId>com.github.nbwzlyd</groupId>
+	    <artifactId>realTimeBlurView2</artifactId>
+	    <version>v0.1</version>
+	</dependency>
 
 使用方法很简单，在你需要高斯模糊的图上，像布局一样写就行了
 
