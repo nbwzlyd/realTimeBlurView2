@@ -29,24 +29,24 @@ Step 2. Add the dependency
 
 
 Maven
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+<repositories>
+  <repository>
+  <id>jitpack.io</id>
+  <url>https://jitpack.io</url>
+  </repository>
+</repositories>
 Step 2. Add the dependency
 
 <dependency>
 	    <groupId>com.github.nbwzlyd</groupId>
 	    <artifactId>realTimeBlurView2</artifactId>
 	    <version>v0.1</version>
-	</dependency>
+</dependency>
+
+
+
 
 使用方法很简单，在你需要高斯模糊的图上，像布局一样写就行了
-
-
-
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -80,10 +80,6 @@ Step 2. Add the dependency
         app:realtimeBlurRoundCornerRadius="6dp"
         app:realtimeOverlayColor="#5a4B0082"/>
 </RelativeLayout>
-
-
-
-
 
 如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法
 
