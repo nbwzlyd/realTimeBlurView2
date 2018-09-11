@@ -98,7 +98,7 @@ public RealtimeBlurView bindView(View targetView) {
  ```  
    
 用FastBlur实现，兼容性上没问题，性能上，看你的设置了 realtimeBlurRadius  和realtimeDownsampleFactor  
-其中realtimeBlurRadius不要超过25
+其中realtimeBlurRadius不要超过25。
 我自己测试，模糊也就几毫秒的时间，很不错了。
-    
+    鄙人不太喜欢写库也没能力写很牛逼的库，代码写的都很简单。人人都能看懂
 我也是参考的github上大神的代码，做了适度精简，替换了renderscript方案，采用fastBlur，兼容性好，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
