@@ -79,16 +79,11 @@ public class RealtimeBlurView extends View {
         public boolean onPreDraw() {
             if (canBlur() && prepare()) {
                 int[] targetLocation = new int[2];
-                mTargetView.getLocationOnScreen(targetLocation);
-                int x = -targetLocation[0];
-                int y = -targetLocation[1];
                 getLocationOnScreen(targetLocation);
-                x += targetLocation[0];
-                y += targetLocation[1];
                 int saveC = mBlurringCanvas.save();//少了这个判断不出效果
                 try {
                     mBlurringCanvas.scale(1 / mScaleFractor, 1 / mScaleFractor);
-                    mBlurringCanvas.translate(-x,-y);
+                    mBlurringCanvas.translate(-targetLocation[0],-targetLocation[1]);
                     mTargetView.draw(mBlurringCanvas);
                 }catch (RuntimeException e){
 
