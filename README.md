@@ -45,6 +45,8 @@ Step 2. Add the dependency
 
 使用方法很简单，在你需要高斯模糊的图上，像布局一样写就行了
 
+
+
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -80,6 +82,9 @@ Step 2. Add the dependency
 </RelativeLayout>
 
 
+
+
+
 如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法
 
 public RealtimeBlurView bindView(View targetView) {
@@ -92,6 +97,9 @@ public RealtimeBlurView bindView(View targetView) {
         });
         return this;
     }
+    
+   
+    
     
     用FastBlur实现，兼容性上没问题，性能上，看你的设置了 realtimeBlurRadius  和realtimeDownsampleFactor  其中realtimeBlurRadius不要超过25
     我自己测试，模糊也就几毫秒的时间，很不错了。
