@@ -1,5 +1,5 @@
 # realTimeBlurView2
-一个实时高斯模糊方案，支持任意图形，（只要你能画出来）任意覆盖色。
+## 一个实时高斯模糊方案，支持任意图形，（只要你能画出来）任意覆盖色。
 
 性能上个人觉得还可以吧，如果你觉得卡，可以设置一下RealtimeBlurView_realtimeDownsampleFactor 默认是4 ，值大的话卡顿效果会好一点
 原理就是在创建bitmap时候并不是创建实际大小的，而是会先缩放，再高斯模糊，再放大，这样性能会更好
@@ -11,7 +11,7 @@
 圆角模式
 圆形模式 任意模式
 
-###Jcenter
+### Jcenter
 ```
 Add it in your root build.gradle at the end of repositories:
 
@@ -28,7 +28,7 @@ Step 2. Add the dependency
 	}
 
 ```
-###Maven
+### Maven
 ```
 <repositories>
   <repository>
