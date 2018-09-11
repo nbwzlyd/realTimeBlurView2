@@ -49,7 +49,7 @@ public class RealtimeBlurView extends View {
         super(context, attrs);
 
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RealtimeBlurView);
-        mBlurRadius = a.getFloat(R.styleable.RealtimeBlurView_realtimeDownsampleFactor,8);
+        mBlurRadius = a.getFloat(R.styleable.RealtimeBlurView_realtimeBlurRadius,8);
         mOverlayColor = a.getColor(R.styleable.RealtimeBlurView_realtimeOverlayColor, 0x04000000);
         mScaleFractor = a.getFloat(R.styleable.RealtimeBlurView_realtimeDownsampleFactor,4);
         mRoundCornerRadius=a.getDimension(R.styleable.RealtimeBlurView_realtimeBlurRoundCornerRadius,
