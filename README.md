@@ -101,4 +101,4 @@ public RealtimeBlurView bindView(View targetView) {
 其中realtimeBlurRadius不要超过25
 我自己测试，模糊也就几毫秒的时间，很不错了。
     
-我也是参考的github上大神的代码，做了适度精简，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
+我也是参考的github上大神的代码，做了适度精简，替换了renderscript方案，采用fastBlur，兼容性好，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
