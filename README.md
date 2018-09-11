@@ -49,3 +49,19 @@
 
 
 如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法
+
+public RealtimeBlurView bindView(View targetView) {
+        mTargetView = targetView;
+        post(new Runnable() {
+            @Override
+            public void run() {
+                mTargetView.getViewTreeObserver().addOnPreDrawListener(mBlurPreDrawListener);
+            }
+        });
+        return this;
+    }
+    
+    用FastBlur实现，兼容性上没问题，性能上，看你的设置了 realtimeBlurRadius  和realtimeDownsampleFactor  其中realtimeBlurRadius不要超过25
+    我自己测试，模糊也就几毫秒的时间，很不错了。
+    
+   我也是参考的github上大神的代码，做了适度精简，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
