@@ -11,6 +11,20 @@
 圆角模式
 圆形模式 任意模式
 
+Add it in your root build.gradle at the end of repositories:
+
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+Step 2. Add the dependency
+
+	dependencies {
+	        implementation 'com.github.nbwzlyd:realTimeBlurView2:v0.1'
+	}
+
 使用方法很简单，在你需要高斯模糊的图上，像布局一样写就行了
 
 <?xml version="1.0" encoding="utf-8"?>
