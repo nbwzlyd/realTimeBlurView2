@@ -11,8 +11,8 @@
 圆角模式
 圆形模式 任意模式
 
-Jcenter
-
+###Jcenter
+```
 Add it in your root build.gradle at the end of repositories:
 
 	allprojects {
@@ -27,8 +27,9 @@ Step 2. Add the dependency
 	        implementation 'com.github.nbwzlyd:realTimeBlurView2:v0.1'
 	}
 
-
-Maven
+```
+###Maven
+```
 <repositories>
   <repository>
   <id>jitpack.io</id>
@@ -42,11 +43,11 @@ Step 2. Add the dependency
 	    <artifactId>realTimeBlurView2</artifactId>
 	    <version>v0.1</version>
 </dependency>
-
-
+```
 
 
 使用方法很简单，在你需要高斯模糊的图上，像布局一样写就行了
+```
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -80,9 +81,9 @@ Step 2. Add the dependency
         app:realtimeBlurRoundCornerRadius="6dp"
         app:realtimeOverlayColor="#5a4B0082"/>
 </RelativeLayout>
-
+```
 如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法
-
+```
 public RealtimeBlurView bindView(View targetView) {
         mTargetView = targetView;
         post(new Runnable() {
@@ -94,10 +95,10 @@ public RealtimeBlurView bindView(View targetView) {
         return this;
     }
     
+ ```  
    
+用FastBlur实现，兼容性上没问题，性能上，看你的设置了 realtimeBlurRadius  和realtimeDownsampleFactor  
+其中realtimeBlurRadius不要超过25
+我自己测试，模糊也就几毫秒的时间，很不错了。
     
-    
-    用FastBlur实现，兼容性上没问题，性能上，看你的设置了 realtimeBlurRadius  和realtimeDownsampleFactor  其中realtimeBlurRadius不要超过25
-    我自己测试，模糊也就几毫秒的时间，很不错了。
-    
-   我也是参考的github上大神的代码，做了适度精简，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
+我也是参考的github上大神的代码，做了适度精简，逻辑更清晰，但是健壮性就差很多了，拿来自己用，bug也好修复。
