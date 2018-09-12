@@ -82,7 +82,7 @@ Step 2. Add the dependency
         app:realtimeOverlayColor="#5a4B0082"/>
 </RelativeLayout>
 ```
-如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法
+如果你觉得这样性能不好，你可以单独设置要高斯模糊的图片，利用bindView（View targetView）方法，（记得屏蔽onAttachedToWindow）
 ```
 public RealtimeBlurView bindView(View targetView) {
         mTargetView = targetView;
